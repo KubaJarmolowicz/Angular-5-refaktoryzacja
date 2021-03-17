@@ -1,0 +1,11 @@
+<task-creator (addTodo)="addTodo($event)"></task-creator>
+<tasks-list
+  [allTasks]="tasks"
+  [shouldShowCompleted]="false"
+  (changeCompleteState)="markTaskAsOposite($event)"
+></tasks-list>
+<tasks-list
+  [allTasks]="tasks"
+  [shouldShowCompleted]="true"
+  (changeCompleteState)="markTaskAsOposite($event)"
+></tasks-list>

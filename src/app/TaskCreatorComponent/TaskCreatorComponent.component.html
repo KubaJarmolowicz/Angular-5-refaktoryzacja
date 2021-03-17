@@ -1,0 +1,13 @@
+<div>
+  <div class="row">
+    <form (submit)="requestAddTodo()">
+      <input
+        type="text"
+        name="new-todo"
+        [(ngModel)]="formModel.newTodo"
+        placeholder="Nowe zadanie"
+      />
+      <button>Dodaj</button>
+    </form>
+  </div>
+</div>

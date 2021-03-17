@@ -1,0 +1,19 @@
+<div>
+  <p>
+    {{listTitle}} (<tasks-counter
+      [allTasks]="allTasks"
+      [filteredTasks]="filteredTasks"
+    ></tasks-counter
+    >):
+  </p>
+  <ul>
+    <li *ngFor="let task of filteredTasks">
+      <span [className]="shouldShowCompleted ? 'task-done' : ''"
+        >{{ task.name }}</span
+      >
+      <button (click)="requestChangeTaskState(task.name)">
+        {{buttonName}}
+      </button>
+    </li>
+  </ul>
+</div>
